@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SinhVienTheoLop {
+public class SinhVienTheoKhoa {
     public static class SV {
         String Name, Lop, Email, MSV;
 
@@ -35,10 +35,10 @@ public class SinhVienTheoLop {
         }
         t = Integer.parseInt(scanner.nextLine());
         while(t-->0){
-            String Class = scanner.nextLine();
-            System.out.println("DANH SACH SINH VIEN LOP "+Class+":");
+            String Year = scanner.nextLine();
+            System.out.println("DANH SACH SINH VIEN KHOA "+Year+":");
             for (SV i : sv) {
-                if(Objects.equals(i.getLop(), Class)){
+                if(Objects.equals(i.getLop().substring(1, 3), Year.substring(2))){
                     i.print();
                 }
             }
